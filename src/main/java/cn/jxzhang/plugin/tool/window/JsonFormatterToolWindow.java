@@ -2,10 +2,9 @@ package cn.jxzhang.plugin.tool.window;
 
 import com.intellij.json.JsonFileType;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.ui.VerticalFlowLayout;
-import com.intellij.ui.EditorTextField;
 
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * JsonFormatterToolWindow
@@ -13,18 +12,16 @@ import javax.swing.*;
  * @author zhangjiaxing
  */
 public class JsonFormatterToolWindow {
+
     private JPanel panel;
 
     public JsonFormatterToolWindow(Project project) {
-        this.panel = new JPanel(new VerticalFlowLayout());
-        EditorTextField editorTextField = new EditorTextField(project, JsonFileType.INSTANCE);
+        this.panel = new JPanel(new GridLayout(0, 1));
+        this.panel.add(getEditorTextPanel(project));
+    }
 
-        editorTextField.setFileType(JsonFileType.INSTANCE);
-        editorTextField.setOneLineMode(false);
-
-        editorTextField.setAutoscrolls(true);
-
-        this.panel.add(editorTextField);
+    private Component getEditorTextPanel(Project project) {
+        return new EditorTextPanel(project, JsonFileType.INSTANCE);
     }
 
     public JPanel getPanel() {
