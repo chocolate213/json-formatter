@@ -15,6 +15,8 @@
                     factoryClass="cn.jxzhang.plugin.tool.window.JsonFormatterToolWindowFactory"/>
     </extensions>
 
+    <idea-version since-build="193.6015.39" until-build="193.6015.39"/> <!-- any 162-based version, 162.94, 162.94.11, etc.-->
+
     <actions>
         <!-- Add your actions here -->
     </actions>
