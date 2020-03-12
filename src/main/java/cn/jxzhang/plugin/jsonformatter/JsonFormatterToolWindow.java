@@ -1,4 +1,4 @@
-package cn.jxzhang.plugin.tool.window;
+package cn.jxzhang.plugin.jsonformatter;
 
 import com.intellij.json.JsonFileType;
 import com.intellij.openapi.project.Project;

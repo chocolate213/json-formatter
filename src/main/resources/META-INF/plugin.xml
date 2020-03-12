@@ -17,7 +17,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow id="JSON Formatter" secondary="true" icon="/icon.svg" anchor="right"
-                    factoryClass="cn.jxzhang.plugin.tool.window.JsonFormatterToolWindowFactory"/>
+                    factoryClass="cn.jxzhang.plugin.jsonformatter.JsonFormatterToolWindowFactory"/>
     </extensions>
 
     <idea-version since-build="193.6015.39" until-build="193.6015.39"/> <!-- any 162-based version, 162.94, 162.94.11, etc.-->
