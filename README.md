@@ -6,7 +6,7 @@ JSON Format Plugin
 [![Build Status][build-img-master]][travis-ci]
 [![GitHub release][release-img]][latest-release]
 
-[plugin-img]: https://img.shields.io/badge/JetbrainsPlugin-13931-orange?style=flat-square?style=flat-square
+[plugin-img]: https://img.shields.io/badge/JetbrainsPlugin-13931-orange?style=flat-square
 [plugin]: https://plugins.jetbrains.com/plugin/13931-json-formatter
 
 [license-img]: https://img.shields.io/github/license/chocolate213/json-formatter?style=flat-square
