@@ -5,13 +5,10 @@
 
     <description>
         <![CDATA[
-        JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write.It is easy for machines to parse and generate.
-        <p/>
-        Usage: Paste JSON string into editor, and press <b>Reformat Code</b> (Ctrl + Alt + L in windows) to format code as if you edit in a file with .json suffix.
+            Format JSON as if you editing a file with .json suffix.
         ]]>
     </description>
 
-    <!--suppress PluginXmlValidity -->
     <change-notes><![CDATA[
         <ul>
           <li>0.1
@@ -22,8 +19,6 @@
         </ul>
     ]]></change-notes>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
@@ -31,7 +26,7 @@
                     factoryClass="cn.jxzhang.plugin.jsonformatter.JsonFormatterToolWindowFactory"/>
     </extensions>
 
-    <idea-version since-build="193.6015.39" until-build="193.6015.39"/> <!-- any 162-based version, 162.94, 162.94.11, etc.-->
+    <idea-version since-build="193.6015.39" until-build="193.6015.39"/>
 
     <actions>
         <!-- Add your actions here -->
