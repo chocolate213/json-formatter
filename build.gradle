@@ -25,8 +25,3 @@ dependencies {
 intellij {
     version '2019.3.2'
 }
-patchPluginXml {
-    changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
-}
