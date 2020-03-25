@@ -28,7 +28,7 @@
                     factoryClass="cn.jxzhang.plugin.jsonformatter.JsonFormatterToolWindowFactory"/>
     </extensions>
 
-    <idea-version since-build="193.6015.39" until-build="193.*"/>
+    <idea-version since-build="171"/>
 
     <actions>
         <!-- Add your actions here -->
