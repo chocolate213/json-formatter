@@ -6,6 +6,8 @@
     <description>
         <![CDATA[
             Format JSON as if you editing a file with .json suffix.
+            <p>
+            Usage: Paste JSON string into editor, and press <b>Reformat Code</b> (Ctrl + Alt + L in windows) to format code as if you editing a file with .json suffix.
         ]]>
     </description>
 
