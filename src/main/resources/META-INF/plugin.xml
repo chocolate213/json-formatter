@@ -18,6 +18,12 @@
               <li>Initial Release for IDEA >= 2019.3</li>
             </ol>
           </li>
+          <li>0.4
+            <ol>
+              <li>Update compatible version(2019.2 and later)</li>
+              <li>Update plugin desc(Add usage)</li>
+            </ol>
+          </li>
         </ul>
     ]]></change-notes>
 
