@@ -24,6 +24,11 @@
               <li>Update plugin desc(Add usage)</li>
             </ol>
           </li>
+          <li>0.5
+            <ol>
+              <li>Update compatible version(2020.1 and later)</li>
+            </ol>
+          </li>
         </ul>
     ]]></change-notes>
 
