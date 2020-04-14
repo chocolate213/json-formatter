@@ -15,7 +15,7 @@ JSON Format Plugin
 [build-img-master]: https://travis-ci.com/chocolate213/json-formatter.svg?branch=master
 [travis-ci]: https://travis-ci.com/github/chocolate213/json-formatter
 
-[release-img]: https://img.shields.io/badge/release-v0.1-blue?style=flat-square
+[release-img]: https://img.shields.io/badge/release-v1.0-blue?style=flat-square
 [latest-release]: https://github.com/chocolate213/json-formatter/releases/latest
 
 ### JSON Formatter
