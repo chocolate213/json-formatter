@@ -4,7 +4,7 @@ jdk:
   - openjdk8
 
 script:
-  - ./gradlew check buildPlugin
+  - ./gradlew check buildPlugin -x test
 
 before_install:
   - chmod +x gradlew
