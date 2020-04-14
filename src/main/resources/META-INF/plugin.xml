@@ -13,9 +13,14 @@
 
     <change-notes><![CDATA[
         <ul>
-          <li>0.1
+          <li>1.0
             <ol>
-              <li>Initial Release for IDEA >= 2019.3</li>
+              <li>Json Formatter 1.0 Release</li>
+            </ol>
+          </li>
+          <li>0.5
+            <ol>
+              <li>Update compatible version(2020.1 and later)</li>
             </ol>
           </li>
           <li>0.4
@@ -24,9 +29,9 @@
               <li>Update plugin desc(Add usage)</li>
             </ol>
           </li>
-          <li>0.5
+          <li>0.1
             <ol>
-              <li>Update compatible version(2020.1 and later)</li>
+              <li>Initial Release for IDEA >= 2019.3</li>
             </ol>
           </li>
         </ul>
@@ -39,7 +44,7 @@
                     factoryClass="cn.jxzhang.plugin.jsonformatter.JsonFormatterToolWindowFactory"/>
     </extensions>
 
-    <idea-version since-build="192"/>
+    <idea-version since-build="193"/>
 
     <actions>
         <!-- Add your actions here -->

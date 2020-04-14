@@ -57,7 +57,7 @@ import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@SuppressWarnings("all")
 public class EditorTextPanel extends NonOpaquePanel implements EditorTextComponent, DocumentListener, DataProvider, TextAccessor,
         FocusListener, MouseListener {
     public static final Key<Boolean> SUPPLEMENTARY_KEY = Key.create("Supplementary");

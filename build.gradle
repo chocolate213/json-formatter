@@ -12,7 +12,7 @@ idea {
 }
 
 group 'cn.jxzhang.plugin'
-version '0.5'
+version '1.0'
 
 sourceCompatibility = 1.8
 
