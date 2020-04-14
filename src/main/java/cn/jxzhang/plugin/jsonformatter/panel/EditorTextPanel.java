@@ -1,4 +1,4 @@
-package cn.jxzhang.plugin.jsonformatter;
+package cn.jxzhang.plugin.jsonformatter.panel;
 
 import com.intellij.codeInsight.daemon.DaemonCodeAnalyzer;
 import com.intellij.ide.ui.UISettings;

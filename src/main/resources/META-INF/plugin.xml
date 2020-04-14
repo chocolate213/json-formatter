@@ -43,5 +43,17 @@
 
     <actions>
         <!-- Add your actions here -->
+        <action id="cn.jxzhang.plugin.jsonformatter.actions.MinifyJsonAction"
+                class="cn.jxzhang.plugin.jsonformatter.actions.MinifyJsonAction"
+                text="Minify Json"
+                description="Minify Json in the editor."/>
+        <action id="cn.jxzhang.plugin.jsonformatter.actions.FormatJsonAction"
+                class="cn.jxzhang.plugin.jsonformatter.actions.FormatJsonAction"
+                text="Format JSON Action"
+                description="Format JSON in the editor."/>
+        <action id="cn.jxzhang.plugin.jsonformatter.actions.CopyContentAction"
+                class="cn.jxzhang.plugin.jsonformatter.actions.CopyContentAction"
+                text="Copy Content In Editor"
+                description="Copy content in editor."/>
     </actions>
 </idea-plugin>

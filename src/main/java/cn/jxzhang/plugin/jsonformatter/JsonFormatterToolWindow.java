@@ -1,5 +1,6 @@
 package cn.jxzhang.plugin.jsonformatter;
 
+import cn.jxzhang.plugin.jsonformatter.panel.EditorTextPanel;
 import com.intellij.json.JsonFileType;
 import com.intellij.openapi.project.Project;
 
@@ -13,15 +14,27 @@ import java.awt.*;
  */
 public class JsonFormatterToolWindow {
 
-    private JPanel panel;
+    private final JPanel panel;
+
+    private final EditorTextPanel editorTextPanel;
 
     public JsonFormatterToolWindow(Project project) {
         this.panel = new JPanel(new GridLayout(0, 1));
-        this.panel.add(getEditorTextPanel(project));
+        this.editorTextPanel = createEditorTextPanel(project);
+
+        init();
     }
 
-    private Component getEditorTextPanel(Project project) {
+    private void init() {
+        this.panel.add(editorTextPanel);
+    }
+
+    private EditorTextPanel createEditorTextPanel(Project project) {
         return new EditorTextPanel(project, JsonFileType.INSTANCE);
+    }
+
+    public EditorTextPanel getEditorTextPanel() {
+        return editorTextPanel;
     }
 
     public JPanel getPanel() {
