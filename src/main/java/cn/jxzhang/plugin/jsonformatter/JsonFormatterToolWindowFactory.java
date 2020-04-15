@@ -3,6 +3,7 @@ package cn.jxzhang.plugin.jsonformatter;
 import cn.jxzhang.plugin.jsonformatter.actions.CopyContentAction;
 import cn.jxzhang.plugin.jsonformatter.actions.FormatJsonAction;
 import cn.jxzhang.plugin.jsonformatter.actions.MinifyJsonAction;
+import cn.jxzhang.plugin.jsonformatter.actions.VerifyJsonAction;
 import cn.jxzhang.plugin.jsonformatter.panel.EditorTextPanel;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.project.Project;
@@ -50,7 +51,11 @@ public class JsonFormatterToolWindowFactory implements ToolWindowFactory {
         copyContentAction.getTemplatePresentation().setIcon(AllIcons.Actions.Copy);
         copyContentAction.getTemplatePresentation().setText(CopyContentAction.ACTION_TEXT);
 
+        VerifyJsonAction verifyJsonAction = new VerifyJsonAction(editorTextPanel);
+        verifyJsonAction.getTemplatePresentation().setIcon(AllIcons.Actions.SetDefault);
+        verifyJsonAction.getTemplatePresentation().setText(VerifyJsonAction.ACTION_TEXT);
+
         ToolWindowEx ex = (ToolWindowEx) toolWindow;
-        ex.setTitleActions(minifyJsonAction, formatJsonAction, copyContentAction);
+        ex.setTitleActions(minifyJsonAction, formatJsonAction, copyContentAction, verifyJsonAction);
     }
 }

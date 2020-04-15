@@ -5,7 +5,7 @@
 
     <description>
         <![CDATA[
-            Format JSON as if you editing a file with .json suffix.
+            <b>Format JSON</b>, <b>Minify JSON</b>, <b>Verify JSON</b> as if you editing a file with .json suffix.
             <p>
             Usage: Paste JSON string into editor, and press <b>Reformat Code</b> (Ctrl + Alt + L in windows) to format code as if you editing a file with .json suffix.
         ]]>
@@ -13,6 +13,11 @@
 
     <change-notes><![CDATA[
         <ul>
+          <li>1.1
+            <ol>
+              <li>New features: Verify Json, Minify JSON</li>
+            </ol>
+          </li>
           <li>1.0
             <ol>
               <li>Json Formatter 1.0 Release</li>
@@ -60,5 +65,7 @@
                 class="cn.jxzhang.plugin.jsonformatter.actions.CopyContentAction"
                 text="Copy Content In Editor"
                 description="Copy content in editor."/>
+        <action id="cn.jxzhang.plugin.jsonformatter.actions.VerifyJsonAction" class="cn.jxzhang.plugin.jsonformatter.actions.VerifyJsonAction"
+                text="Verify Json" description="Verify json"/>
     </actions>
 </idea-plugin>

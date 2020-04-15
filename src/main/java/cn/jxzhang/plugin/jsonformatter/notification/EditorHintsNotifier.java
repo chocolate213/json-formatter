@@ -7,8 +7,6 @@ import com.intellij.openapi.editor.ScrollingModel;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Objects;
-
 /**
  * EditorHintsNotifier
  *
@@ -19,20 +17,27 @@ public class EditorHintsNotifier {
     private EditorHintsNotifier() {
     }
 
-    public static void notify(@NotNull Editor editor, @NotNull String message, long position) {
+    private static void notify(@NotNull Editor editor, @NotNull String message, long position, @NotNull Runnable notifier) {
         if (StringUtils.isBlank(message)) {
             return;
         }
 
-        if (position > editor.getDocument().getTextLength() || position < 0) {
-            return;
+        if (position <= editor.getDocument().getTextLength() && position >= 0) {
+            // move caret to position
+            editor.getCaretModel().moveToOffset((int) position);
         }
 
-        // move caret to position, and scroll to the caret
-        editor.getCaretModel().moveToOffset((int) position);
+        // scroll to caret
         ScrollingModel scrollingModel = editor.getScrollingModel();
         scrollingModel.scrollToCaret(ScrollType.MAKE_VISIBLE);
+        scrollingModel.runActionOnScrollingFinished(notifier);
+    }
 
-        scrollingModel.runActionOnScrollingFinished(() -> HintManager.getInstance().showErrorHint(Objects.requireNonNull(editor), message));
+    public static void notifyInfo(@NotNull Editor editor, @NotNull String message)  {
+        notify(editor, message, -1, () -> HintManager.getInstance().showInformationHint(editor, message));
+    }
+
+    public static void notifyError(@NotNull Editor editor, @NotNull String message, long position)  {
+        notify(editor, message, position, () -> HintManager.getInstance().showErrorHint(editor, message));
     }
 }

@@ -10,9 +10,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  *
  * @author zhangjiaxing created on 2020-04-14
  */
-public class JsonUtil {
+public class JsonUtils {
 
-    private JsonUtil() {}
+    private JsonUtils() {}
 
     public static String formatJson(String jsonStr) throws JsonProcessingException {
         Object jsonObject = Holder.MAPPER.readValue(jsonStr, Object.class);
@@ -22,6 +22,10 @@ public class JsonUtil {
     public static String minifyJson(String jsonStr) throws JsonProcessingException {
         Object jsonObject = Holder.MAPPER.readValue(jsonStr, Object.class);
         return Holder.MAPPER.writeValueAsString(jsonObject);
+    }
+
+    public static void verifyJson(String jsonStr) throws JsonProcessingException {
+        Holder.MAPPER.readValue(jsonStr, Object.class);
     }
 
     private static final class Holder {

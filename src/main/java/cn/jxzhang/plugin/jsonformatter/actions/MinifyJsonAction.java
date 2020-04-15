@@ -2,7 +2,7 @@ package cn.jxzhang.plugin.jsonformatter.actions;
 
 import cn.jxzhang.plugin.jsonformatter.notification.EditorHintsNotifier;
 import cn.jxzhang.plugin.jsonformatter.panel.EditorTextPanel;
-import cn.jxzhang.plugin.jsonformatter.utils.JsonUtil;
+import cn.jxzhang.plugin.jsonformatter.utils.JsonUtils;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -38,13 +38,13 @@ public class MinifyJsonAction extends AnAction {
         }
 
         try {
-            String minifiedJson = JsonUtil.minifyJson(text);
+            String minifiedJson = JsonUtils.minifyJson(text);
             editorTextPanel.setText(minifiedJson);
         } catch (JsonProcessingException jsonProcessingException) {
             String originalMessage = jsonProcessingException.getOriginalMessage();
             long charOffset = jsonProcessingException.getLocation().getCharOffset();
 
-            EditorHintsNotifier.notify(Objects.requireNonNull(editorTextPanel.getEditor()), originalMessage, charOffset);
+            EditorHintsNotifier.notifyError(Objects.requireNonNull(editorTextPanel.getEditor()), originalMessage, charOffset);
         }
     }
 }
