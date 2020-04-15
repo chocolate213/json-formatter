@@ -24,5 +24,5 @@ JSON Format Plugin
 
 ![screenshots](./docs/screenshot.gif)
 
-#### Usage
+### Usage
 Paste JSON string into editor, and press **Reformat Code** (Ctrl + Alt + L in windows) to format code as if you editing a file with .json suffix.
