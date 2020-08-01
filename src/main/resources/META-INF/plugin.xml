@@ -13,6 +13,11 @@
 
     <change-notes><![CDATA[
         <ul>
+          <li>1.2
+            <ol>
+              <li>Update compatible version(2020.2 and later)</li>
+            </ol>
+          </li>
           <li>1.1
             <ol>
               <li>New features: Verify Json, Minify JSON</li>

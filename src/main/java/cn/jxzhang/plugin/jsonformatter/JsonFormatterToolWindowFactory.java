@@ -56,6 +56,7 @@ public class JsonFormatterToolWindowFactory implements ToolWindowFactory {
         verifyJsonAction.getTemplatePresentation().setText(VerifyJsonAction.ACTION_TEXT);
 
         ToolWindowEx ex = (ToolWindowEx) toolWindow;
+        //noinspection deprecation
         ex.setTitleActions(minifyJsonAction, formatJsonAction, copyContentAction, verifyJsonAction);
     }
 }
