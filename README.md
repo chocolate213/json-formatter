@@ -3,6 +3,7 @@ JSON Format Plugin
 
 [![Jetbrains Plugins][plugin-img]][plugin]
 [![License][license-img]][license]
+![Java CI with Gradle](https://github.com/chocolate213/json-formatter/workflows/Java%20CI%20with%20Gradle/badge.svg)
 [![Build Status][build-img-master]][travis-ci]
 [![GitHub release][release-img]][latest-release]
 
