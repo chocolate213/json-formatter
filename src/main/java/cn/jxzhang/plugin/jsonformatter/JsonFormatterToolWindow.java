@@ -22,6 +22,7 @@ public class JsonFormatterToolWindow {
         this.panel = new JPanel(new GridLayout(0, 1));
         this.editorTextPanel = createEditorTextPanel(project);
 
+      System.out.println("test");
         init();
     }
 
