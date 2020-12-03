@@ -8,11 +8,19 @@
             <b>Format JSON</b>, <b>Minify JSON</b>, <b>Verify JSON</b> as if you editing a file with .json suffix.
             <p>
             Usage: Paste JSON string into editor, and press <b>Reformat Code</b> (Ctrl + Alt + L in windows) to format code as if you editing a file with .json suffix.
+            <p>
+            The plugin panel will appear on the right side of the window after installed, and you don't have to restart the IDE. make sure that you have enabled the "Tool Window Bars" in Edit -> Appearance -> Tool Window Bars.
         ]]>
     </description>
 
     <change-notes><![CDATA[
         <ul>
+          <li>1.3
+            <ol>
+              <li>Add Escape/Unescape String feature.</li>
+              <li>Update compatible version(2020.3 and later)</li>
+            </ol>
+          </li>
           <li>1.2
             <ol>
               <li>Update compatible version(2020.2 and later)</li>
@@ -72,5 +80,9 @@
                 description="Copy content in editor."/>
         <action id="cn.jxzhang.plugin.jsonformatter.actions.VerifyJsonAction" class="cn.jxzhang.plugin.jsonformatter.actions.VerifyJsonAction"
                 text="Verify Json" description="Verify json"/>
+        <action id="cn.jxzhang.plugin.jsonformatter.actions.UnescapeStringAction" class="cn.jxzhang.plugin.jsonformatter.actions.UnescapeStringAction"
+                text="Unescape String" description="Unescape string"/>
+        <action id="cn.jxzhang.plugin.jsonformatter.actions.EscapeStringAction" class="cn.jxzhang.plugin.jsonformatter.actions.EscapeStringAction"
+                text="Escape String" description="Escape string"/>
     </actions>
 </idea-plugin>

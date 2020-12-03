@@ -1,9 +1,6 @@
 package cn.jxzhang.plugin.jsonformatter;
 
-import cn.jxzhang.plugin.jsonformatter.actions.CopyContentAction;
-import cn.jxzhang.plugin.jsonformatter.actions.FormatJsonAction;
-import cn.jxzhang.plugin.jsonformatter.actions.MinifyJsonAction;
-import cn.jxzhang.plugin.jsonformatter.actions.VerifyJsonAction;
+import cn.jxzhang.plugin.jsonformatter.actions.*;
 import cn.jxzhang.plugin.jsonformatter.panel.EditorTextPanel;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.project.Project;
@@ -55,8 +52,16 @@ public class JsonFormatterToolWindowFactory implements ToolWindowFactory {
         verifyJsonAction.getTemplatePresentation().setIcon(AllIcons.Actions.SetDefault);
         verifyJsonAction.getTemplatePresentation().setText(VerifyJsonAction.ACTION_TEXT);
 
+        UnescapeStringAction unescapeStringAction = new UnescapeStringAction(editorTextPanel);
+        unescapeStringAction.getTemplatePresentation().setIcon(AllIcons.Actions.MoveUp);
+        unescapeStringAction.getTemplatePresentation().setText(UnescapeStringAction.ACTION_TEXT);
+
+        EscapeStringAction escapeStringAction = new EscapeStringAction(editorTextPanel);
+        escapeStringAction.getTemplatePresentation().setIcon(AllIcons.Actions.MoveDown);
+        escapeStringAction.getTemplatePresentation().setText(EscapeStringAction.ACTION_TEXT);
+
         ToolWindowEx ex = (ToolWindowEx) toolWindow;
         //noinspection deprecation
-        ex.setTitleActions(minifyJsonAction, formatJsonAction, copyContentAction, verifyJsonAction);
+        ex.setTitleActions(minifyJsonAction, formatJsonAction, copyContentAction, verifyJsonAction, escapeStringAction, unescapeStringAction);
     }
 }
