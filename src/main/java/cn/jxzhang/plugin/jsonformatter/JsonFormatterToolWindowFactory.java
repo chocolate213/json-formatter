@@ -64,6 +64,6 @@ public class JsonFormatterToolWindowFactory implements ToolWindowFactory {
 
         ToolWindowEx ex = (ToolWindowEx) toolWindow;
 
-        ex.setTitleActions(Arrays.asList(minifyJsonAction, formatJsonAction, copyContentAction, verifyJsonAction, escapeStringAction, unescapeStringAction));
+        ex.setTitleActions(minifyJsonAction, formatJsonAction, copyContentAction, verifyJsonAction, escapeStringAction, unescapeStringAction);
     }
 }
