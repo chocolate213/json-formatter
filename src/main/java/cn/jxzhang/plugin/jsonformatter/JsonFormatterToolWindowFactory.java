@@ -11,6 +11,8 @@ import com.intellij.ui.content.Content;
 import com.intellij.ui.content.ContentFactory;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Arrays;
+
 /**
  * JsonFormatterToolWindowFactory
  *
@@ -61,7 +63,7 @@ public class JsonFormatterToolWindowFactory implements ToolWindowFactory {
         escapeStringAction.getTemplatePresentation().setText(EscapeStringAction.ACTION_TEXT);
 
         ToolWindowEx ex = (ToolWindowEx) toolWindow;
-        //noinspection deprecation
-        ex.setTitleActions(minifyJsonAction, formatJsonAction, copyContentAction, verifyJsonAction, escapeStringAction, unescapeStringAction);
+
+        ex.setTitleActions(Arrays.asList(minifyJsonAction, formatJsonAction, copyContentAction, verifyJsonAction, escapeStringAction, unescapeStringAction));
     }
 }
