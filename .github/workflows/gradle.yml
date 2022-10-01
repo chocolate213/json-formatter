@@ -34,4 +34,5 @@ jobs:
         arguments: check buildPlugin
     - uses: actions/upload-artifact@v3
       with:
+        name: RELEASE
         path: build/distributions/json-formatter-*.zip
