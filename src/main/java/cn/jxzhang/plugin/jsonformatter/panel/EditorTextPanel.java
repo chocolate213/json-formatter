@@ -573,7 +573,7 @@ public class EditorTextPanel extends NonOpaquePanel implements EditorTextCompone
 
     @Override
     public Color getBackground() {
-        Color color = getBackgroundColor(isEnabled(), EditorColorsUtil.getGlobalOrDefaultColorScheme());
+        Color color = myEnforcedBgColor != null ? myEnforcedBgColor : UIUtil.getTextFieldBackground();
         return color != null ? color : super.getBackground();
     }
 

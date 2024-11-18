@@ -13,9 +13,9 @@ JSON Format Plugin
 ### JetBrains IDE/Android Studio JSON Formatter Plugin
 
 **Format**, **Minify**, **Verify** JSON as if you edit a file with <code>.json</code> suffix.
+<!-- Plugin description end -->
 
 ![screenshots](./docs/screenshot.gif)
 
 ### Usage
 Paste JSON string into the editor, and press **Reformat Code** (Ctrl + Alt + L in windows) to format code as if you edit a file with .json suffix.
-<!-- Plugin description end -->
