@@ -73,6 +73,7 @@ intellijPlatform {
 
         val changelog = project.changelog // local variable for configuration cache compatibility
         // Get the latest available change notes from the changelog file
+        changelog.headerParserRegex = """^((0|[1-9]\d*)\.(0|[1-9]\d*)(\.\d+)?).*$|^Unreleased.*$""".toRegex()
         changeNotes = providers.gradleProperty("pluginVersion").map { pluginVersion ->
             with(changelog) {
                 renderItem(
@@ -86,7 +87,7 @@ intellijPlatform {
 
         ideaVersion {
             sinceBuild = providers.gradleProperty("pluginSinceBuild")
-            untilBuild = providers.gradleProperty("pluginUntilBuild")
+            untilBuild = provider { null }
         }
     }
 
@@ -136,6 +137,10 @@ tasks {
 
     publishPlugin {
         dependsOn(patchChangelog)
+    }
+
+    buildSearchableOptions {
+        enabled = false
     }
 }
 
