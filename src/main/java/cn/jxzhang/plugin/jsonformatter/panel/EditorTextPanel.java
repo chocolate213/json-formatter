@@ -646,7 +646,7 @@ public class EditorTextPanel extends NonOpaquePanel implements EditorTextCompone
         if (myEditor != null) {
             size.height = myEditor.getLineHeight();
 
-            if (UIUtil.isUnderDefaultMacTheme() || StartupUiUtil.isUnderDarcula() || UIUtil.isUnderIntelliJLaF()) {
+            if (StartupUiUtil.isUnderDarcula() || UIUtil.isUnderIntelliJLaF()) {
                 size.height = Math.max(size.height, JBUIScale.scale(16));
             }
 

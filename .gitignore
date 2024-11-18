@@ -1,11 +1,6 @@
 # Project exclude paths
-/.gradle/
-.idea/$CACHE_FILE$
-.idea/.gitignore
-.idea/codeStyles/
-.idea/dictionaries
-.idea/gradle.xml
-.idea/jarRepositories.xml
-.idea/misc.xml
-.idea/sbt.xml
-.idea/uiDesigner.xml
+.gradle
+.idea
+.intellijPlatform
+.qodana
+build

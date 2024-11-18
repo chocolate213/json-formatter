@@ -1,5 +1,5 @@
-# Changelog
+<!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-## Version 0.1 - 2020.03.12
+# json-formatter Changelog
 
-See the commit [git commit history](https://github.com/chocolate213/json-formatter/commits/master)
+## [Unreleased]

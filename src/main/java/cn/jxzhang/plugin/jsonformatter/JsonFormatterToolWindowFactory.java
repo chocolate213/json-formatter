@@ -28,7 +28,7 @@ public class JsonFormatterToolWindowFactory implements ToolWindowFactory {
     @Override
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
         JsonFormatterToolWindow window = new JsonFormatterToolWindow(project);
-        ContentFactory factory = ContentFactory.SERVICE.getInstance();
+        ContentFactory factory = ContentFactory.getInstance();
         Content jsonFormatter = factory.createContent(window.getPanel(), DISPLAY_NAME, true);
         toolWindow.getContentManager().addContent(jsonFormatter);
 

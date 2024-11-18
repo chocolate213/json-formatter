@@ -62,6 +62,7 @@
     ]]></change-notes>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.json</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow id="JSON Formatter" secondary="true" icon="/icon.svg" anchor="right"
