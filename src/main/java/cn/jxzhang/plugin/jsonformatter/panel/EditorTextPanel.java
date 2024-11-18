@@ -580,11 +580,11 @@ public class EditorTextPanel extends NonOpaquePanel implements EditorTextCompone
     private Color getBackgroundColor(boolean enabled, final EditorColorsScheme colorsScheme) {
         if (myEnforcedBgColor != null) return myEnforcedBgColor;
         if (ComponentUtil.getParentOfType((Class<? extends CellRendererPane>) CellRendererPane.class, (Component) this) != null && (StartupUiUtil
-                .isUnderDarcula() || UIUtil.isUnderIntelliJLaF())) {
+                .INSTANCE.isDarkTheme()) || UIUtil.isUnderIntelliJLaF()) {
             return getParent().getBackground();
         }
 
-        if (StartupUiUtil.isUnderDarcula()/* || UIUtil.isUnderIntelliJLaF()*/) return UIUtil.getTextFieldBackground();
+        if (StartupUiUtil.INSTANCE.isDarkTheme()/* || UIUtil.isUnderIntelliJLaF()*/) return UIUtil.getTextFieldBackground();
 
         return enabled
                 ? colorsScheme.getDefaultBackground()
@@ -646,7 +646,7 @@ public class EditorTextPanel extends NonOpaquePanel implements EditorTextCompone
         if (myEditor != null) {
             size.height = myEditor.getLineHeight();
 
-            if (StartupUiUtil.isUnderDarcula() || UIUtil.isUnderIntelliJLaF()) {
+            if (StartupUiUtil.INSTANCE.isDarkTheme() || UIUtil.isUnderIntelliJLaF()) {
                 size.height = Math.max(size.height, JBUIScale.scale(16));
             }
 
