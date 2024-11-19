@@ -6,7 +6,7 @@ JSON Format Plugin
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/13931-json-formatter.svg)](https://plugins.jetbrains.com/plugin/13931-json-formatter)
 [![License][license-img]][license]
 
-[license-img]: https://img.shields.io/github/license/chocolate213/json-formatter?style=flat-square
+[license-img]: https://img.shields.io/github/license/chocolate213/json-formatter
 [license]: https://github.com/chocolate213/json-formatter/blob/master/LICENSE
 
 <!-- Plugin description -->
