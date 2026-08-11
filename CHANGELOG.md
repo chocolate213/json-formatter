@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+## [1.8] (2026/08/11)
+### Fixed
+- Align the JSON editor background and font with the main editor color scheme.
+
 ## [1.7] (2026/08/11)
 ### Fixed
 - Restore JSON code folding in the formatter tool window on 2026.1+ IDEs ([#7](https://github.com/chocolate213/json-formatter/issues/7)).

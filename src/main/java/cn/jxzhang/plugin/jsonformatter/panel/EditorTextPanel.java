@@ -26,6 +26,7 @@ public class EditorTextPanel extends EditorTextField {
 
     public EditorTextPanel(Project project, FileType fileType) {
         super(null, project, fileType, false, false);
+        setFontInheritedFromLAF(false);
         addSettingsProvider(this::configureEditor);
         addDocumentListener(new DocumentListener() {
             @Override
@@ -43,6 +44,7 @@ public class EditorTextPanel extends EditorTextField {
         settings.setIndentGuidesShown(true);
         editor.setHorizontalScrollbarVisible(true);
         editor.setVerticalScrollbarVisible(true);
+        editor.setBackgroundColor(null);
 
         scheduleFoldingUpdate();
     }
