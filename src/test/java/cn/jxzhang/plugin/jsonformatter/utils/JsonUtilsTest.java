@@ -1,7 +1,6 @@
 package cn.jxzhang.plugin.jsonformatter.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import org.apache.commons.lang3.StringEscapeUtils;
 import org.junit.Test;
 
 /**

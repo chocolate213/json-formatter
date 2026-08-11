@@ -4,3 +4,4 @@
 .intellijPlatform
 .qodana
 build
+.DS_Store

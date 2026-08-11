@@ -6,7 +6,6 @@ import com.intellij.icons.AllIcons;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowFactory;
-import com.intellij.openapi.wm.ex.ToolWindowEx;
 import com.intellij.ui.content.Content;
 import com.intellij.ui.content.ContentFactory;
 import org.jetbrains.annotations.NotNull;
@@ -62,8 +61,13 @@ public class JsonFormatterToolWindowFactory implements ToolWindowFactory {
         escapeStringAction.getTemplatePresentation().setIcon(AllIcons.Actions.MoveDown);
         escapeStringAction.getTemplatePresentation().setText(EscapeStringAction.ACTION_TEXT);
 
-        ToolWindowEx ex = (ToolWindowEx) toolWindow;
-
-        ex.setTitleActions(minifyJsonAction, formatJsonAction, copyContentAction, verifyJsonAction, escapeStringAction, unescapeStringAction);
+        toolWindow.setTitleActions(Arrays.asList(
+                minifyJsonAction,
+                formatJsonAction,
+                copyContentAction,
+                verifyJsonAction,
+                escapeStringAction,
+                unescapeStringAction
+        ));
     }
 }

@@ -3,7 +3,7 @@ package cn.jxzhang.plugin.jsonformatter.actions;
 import cn.jxzhang.plugin.jsonformatter.panel.EditorTextPanel;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
-import org.apache.commons.lang3.StringEscapeUtils;
+import com.intellij.openapi.util.text.StringUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 
@@ -25,7 +25,6 @@ public class EscapeStringAction extends AnAction {
     }
 
     @Override
-    @SuppressWarnings("deprecation")
     public void actionPerformed(@NotNull AnActionEvent e) {
         String editorContent = editorTextPanel.getText();
 
@@ -33,7 +32,7 @@ public class EscapeStringAction extends AnAction {
             return;
         }
 
-        String unescapedContent = StringEscapeUtils.escapeJava(editorContent);
-        editorTextPanel.setText(unescapedContent);
+        String escapedContent = StringUtil.escapeStringCharacters(editorContent);
+        editorTextPanel.setText(escapedContent);
     }
 }
