@@ -3,6 +3,10 @@
 JSON Format Plugin
 =================
 
+Format, minify, validate, escape and unescape JSON without leaving your IDE or creating a temporary file.
+
+[Homepage & interactive demo](https://chocolate213.github.io/json-formatter/) · [Install from JetBrains Marketplace](https://plugins.jetbrains.com/plugin/13931-json-formatter)
+
 ![Build](https://github.com/chocolate213/json-formatter/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/13931-json-formatter.svg)](https://plugins.jetbrains.com/plugin/13931-json-formatter)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/13931-json-formatter.svg)](https://plugins.jetbrains.com/plugin/13931-json-formatter)
