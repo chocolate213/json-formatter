@@ -1,27 +1,31 @@
+# JSON Formatter
 
-
-JSON Format Plugin
-=================
-
-Format, minify, validate, escape and unescape JSON without leaving your IDE or creating a temporary file.
-
-[Homepage & interactive demo](https://chocolate213.github.io/json-formatter/) · [Install from JetBrains Marketplace](https://plugins.jetbrains.com/plugin/13931-json-formatter)
-
-![Build](https://github.com/chocolate213/json-formatter/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/13931-json-formatter.svg)](https://plugins.jetbrains.com/plugin/13931-json-formatter)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/13931-json-formatter.svg)](https://plugins.jetbrains.com/plugin/13931-json-formatter)
-[![License][license-img]][license]
-
-[license-img]: https://img.shields.io/github/license/chocolate213/json-formatter
-[license]: https://github.com/chocolate213/json-formatter/blob/master/LICENSE
+[![License](https://img.shields.io/github/license/chocolate213/json-formatter)](LICENSE)
 
 <!-- Plugin description -->
-### JetBrains IDE/Android Studio JSON Formatter Plugin
+Format, minify, validate, escape, and unescape JSON **without leaving your IDE or creating a temporary file**.
 
-**Format**, **Minify**, **Verify** JSON as if you edit a file with <code>.json</code> suffix.
+A dedicated tool window for JetBrains IDEs and Android Studio, with syntax highlighting, code folding, and one-click copying.
 <!-- Plugin description end -->
 
-![screenshots](./docs/screenshot.gif)
+[Install from Marketplace](https://plugins.jetbrains.com/plugin/13931-json-formatter) · [Interactive demo](https://chocolate213.github.io/json-formatter/) · [Usage guide](https://plugins.jetbrains.com/plugin/13931-json-formatter/usage-guide)
 
-### Usage
-Paste JSON string into the JSON Formatter tool window editor, and press **Reformat Code** (Ctrl + Alt + L in windows) to format code as if you edit a file with .json suffix.
+![JSON Formatter in action](docs/screenshot.gif)
+
+## Quick start
+
+1. Install **Json Formatter** from **Settings → Plugins → Marketplace**.
+2. Open **View → Tool Windows → JSON Formatter** and paste your JSON.
+3. Choose **Expand Json** to format it, or use the other header actions to minify, validate, escape, unescape, and copy. Hover over an icon to see its name.
+
+You can also use **Reformat Code** with focus in the JSON editor: `Ctrl+Alt+L` on Windows or `⌘⌥L` on macOS with the default keymap.
+
+## Feedback
+
+[Report a bug or request a feature](https://github.com/chocolate213/json-formatter/issues). Include your IDE and plugin versions and a small anonymized example.
+
+## License
+
+[MIT](LICENSE)
